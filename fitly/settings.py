@@ -60,7 +60,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "enf.urls"
+ROOT_URLCONF = "fitly.urls"
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "enf.wsgi.application"
+WSGI_APPLICATION = "fitly.wsgi.application"
 
 
 # Database

@@ -5,6 +5,10 @@ from django.utils.text import slugify
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
+    
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -17,6 +21,10 @@ class Category(models.Model):
     
 class Size(models.Model):
     name = models.CharField(max_length=20)
+    
+    class Meta:
+        verbose_name = "Size"
+        verbose_name_plural = "Sizes"
 
     def __str__(self):
         return self.name
@@ -43,6 +51,10 @@ class Product(models.Model):
     main_image = models.ImageField(upload_to='products/main/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
 
     def __str__(self):
         return self.name
