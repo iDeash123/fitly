@@ -31,7 +31,7 @@ class Size(models.Model):
     
     
 class ProductSize(models.Model):
-    product = models.ForeignKey('Product', related_name='product_size', 
+    product = models.ForeignKey('Product', related_name='product_sizes', 
                                 on_delete=models.CASCADE)
     size = models.ForeignKey(Size, related_name='product_size', 
                              on_delete=models.CASCADE)
